@@ -1,0 +1,4 @@
+# Local visual validation output
+validation/*.png
+.browser-profile/
+
