@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Rockalot — Independent games by Rocco Loria</title>
-    <meta name="description" content="Rockalot is the Brisbane-based independent game studio of Rocco Loria, currently developing the competitive pinball game Bumper Bout.">
-    <meta name="theme-color" content="#e70013">
+    <meta name="description" content="Rockalot is an award-winning independent game developer from Brisbane, Australia, currently creating Bumper Bout.">
+    <meta name="theme-color" content="#fcfdff">
     <link rel="canonical" href="https://rockalot.dev/">
     <link rel="icon" type="image/png" href="assets/rockalot-logo.png">
     <meta property="og:type" content="website">
@@ -13,123 +13,114 @@
     <meta property="og:title" content="Rockalot — Independent games by Rocco Loria">
     <meta property="og:description" content="Meet Bumper Bout, a competitive two-player pinball game on a shared playfield.">
     <meta property="og:url" content="https://rockalot.dev/">
-    <meta property="og:image" content="https://rockalot.dev/assets/bumper-bout-04.png">
-    <meta property="og:image:width" content="800">
-    <meta property="og:image:height" content="450">
-    <meta property="og:image:alt" content="Bumper Bout gameplay on a colourful space-themed pinball stage">
+    <meta property="og:image" content="https://rockalot.dev/assets/figma/raw-03.png">
+    <meta property="og:image:width" content="2560">
+    <meta property="og:image:height" content="1440">
+    <meta property="og:image:alt" content="Bumper Bout gameplay on a space-themed pinball stage">
+    <link rel="stylesheet" href="assets/figma/fonts.css">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="Rockalot home">
-        <img src="assets/rockalot-logo.png" width="309" height="468" alt="" aria-hidden="true">
-        <span>ROCKALOT</span>
-      </a>
-      <a class="header-cta" href="https://store.steampowered.com/app/3938260/Bumper_Bout/" target="_blank" rel="noreferrer"><span class="header-cta-long">Bumper Bout on&nbsp;</span>Steam <span aria-hidden="true">↗</span></a>
-    </header>
+    <div class="page-shell">
+      <div class="language-control">
+        <button class="language-button" type="button" aria-expanded="false" aria-controls="language-menu">
+          <img src="assets/figma/social-icons.svg" width="82" height="57" alt="">
+          <span>A あ</span>
+          <img class="language-arrow" src="assets/figma/language-arrow.svg" width="10" height="9" alt="">
+        </button>
+        <div class="language-menu" id="language-menu" hidden>
+          <span lang="en">English</span>
+        </div>
+      </div>
 
-    <main id="main">
-      <section class="hero" id="top" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow">Independent game studio</p>
-          <h1 id="hero-title">ROCKALOT</h1>
-          <p class="hero-intro">Independent games by Rocco Loria.<br>Brisbane, Australia.</p>
-          <p class="hero-note">Colourful arcade games built for good-natured rivalry.</p>
-          <a class="text-link" href="#bumper-bout">Meet Bumper Bout <span aria-hidden="true">↓</span></a>
-        </div>
-        <a class="hero-game" href="#bumper-bout" aria-label="Discover Bumper Bout">
-          <img src="assets/bumper-bout-01.png" width="800" height="450" alt="Two players face off on Bumper Bout's shared pinball playfield">
-          <span class="hero-game-label"><strong>Current game</strong><span>Bumper Bout</span></span>
-        </a>
-      </section>
+      <main id="main">
+        <section class="hero" id="top" aria-labelledby="site-title">
+          <h1 class="visually-hidden" id="site-title">Rockalot</h1>
+          <img class="rockalot-mark" src="assets/figma/uk-flag.svg" width="307" height="465" alt="Rockalot">
 
-      <section class="game-section" id="bumper-bout" aria-labelledby="game-title">
-        <div class="game-intro shell">
-          <div class="game-logo-wrap">
-            <img class="game-logo" src="assets/bumper-bout-logo.svg" width="1407" height="1524" alt="Bumper Bout">
-          </div>
-          <div class="game-copy">
-            <p class="eyebrow eyebrow-light">The current game</p>
-            <h2 id="game-title">Competitive two-player pinball on a shared playfield.</h2>
-            <p>Defend your own drain while sending balls into your opponent’s side. Score to create new offensive opportunities, master distinctive characters, and battle across colourful stages with their own surprises.</p>
-            <p class="development-note">Bumper Bout is currently in development.</p>
-            <a class="button button-light" href="https://store.steampowered.com/app/3938260/Bumper_Bout/" target="_blank" rel="noreferrer">Wishlist on Steam <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
+          <p class="studio-intro">
+            Rockalot is an award-winning independent game developer from Brisbane, Australia.
+            <span class="gday" aria-hidden="true">G’day</span>
+          </p>
 
-        <div class="gallery shell" aria-label="Bumper Bout screenshots">
-          <button class="gallery-item gallery-item-wide" type="button" data-lightbox="assets/bumper-bout-04.png" data-alt="Bumper Bout match on a space-themed stage with planets and satellites">
-            <img src="assets/bumper-bout-04.png" width="800" height="450" alt="Bumper Bout match on a space-themed stage with planets and satellites" loading="lazy">
-            <span class="zoom-label">View larger</span>
-          </button>
-          <button class="gallery-item" type="button" data-lightbox="assets/bumper-bout-02.png" data-alt="Two players juggling several balls on Bumper Bout's classic stage">
-            <img src="assets/bumper-bout-02.png" width="800" height="450" alt="Two players juggling several balls on Bumper Bout's classic stage" loading="lazy">
-            <span class="zoom-label">View larger</span>
-          </button>
-          <button class="gallery-item" type="button" data-lightbox="assets/bumper-bout-06.png" data-alt="Bumper Bout football stage with goal drains and player bumpers">
-            <img src="assets/bumper-bout-06.png" width="800" height="450" alt="Bumper Bout football stage with goal drains and player bumpers" loading="lazy">
-            <span class="zoom-label">View larger</span>
-          </button>
-          <button class="gallery-item" type="button" data-lightbox="assets/bumper-bout-01.png" data-alt="The opening countdown on Bumper Bout's shared playfield">
-            <img src="assets/bumper-bout-01.png" width="800" height="450" alt="The opening countdown on Bumper Bout's shared playfield" loading="lazy">
-            <span class="zoom-label">View larger</span>
-          </button>
-          <button class="gallery-item" type="button" data-lightbox="assets/bumper-bout-03.png" data-alt="Player one celebrates a Bumper Bout victory">
-            <img src="assets/bumper-bout-03.png" width="800" height="450" alt="Player one celebrates a Bumper Bout victory" loading="lazy">
-            <span class="zoom-label">View larger</span>
-          </button>
-          <button class="gallery-item gallery-item-wide" type="button" data-lightbox="assets/bumper-bout-05.png" data-alt="Player two celebrates a Bumper Bout victory on the space stage">
-            <img src="assets/bumper-bout-05.png" width="800" height="450" alt="Player two celebrates a Bumper Bout victory on the space stage" loading="lazy">
-            <span class="zoom-label">View larger</span>
-          </button>
-        </div>
-      </section>
+          <nav class="social-cluster social-cluster--hero" aria-label="Rockalot social links">
+            <img src="assets/figma/rockalot-logo.svg" width="299" height="44" alt="" aria-hidden="true">
+            <a class="social-hit social-hit--one" href="https://bsky.app/profile/rockalot.bsky.social" target="_blank" rel="noreferrer" aria-label="Rockalot on Bluesky"></a>
+            <a class="social-hit social-hit--two" href="mailto:sonrocco@gmail.com" aria-label="Email Rockalot"></a>
+            <a class="social-hit social-hit--three" href="https://m.me/sonrocco" target="_blank" rel="noreferrer" aria-label="Message Rockalot on Messenger"></a>
+          </nav>
 
-      <section class="about-section shell" id="about" aria-labelledby="about-title">
-        <div>
-          <p class="eyebrow">About Rockalot</p>
-          <h2 id="about-title">Small studio.<br>Big arcade energy.</h2>
-        </div>
-        <div class="about-copy">
-          <p>Rockalot is the independent game development studio of Rocco Loria, based in Brisbane, Australia. It creates colourful, approachable arcade-style games made to be picked up, shared and replayed.</p>
-          <p>Bumper Bout is currently in development and won the Game of the Show People’s Choice Award at Queensland Games Festival 2026.</p>
-        </div>
-      </section>
+          <article class="game-card" id="bumper-bout" aria-labelledby="game-title">
+            <h2 class="visually-hidden" id="game-title">Bumper Bout</h2>
+            <img class="game-art" src="assets/figma/bumper-bout-logo.svg" width="825" height="849" alt="Bumper Bout">
 
-      <section class="support-section" aria-labelledby="support-title">
-        <div class="support-inner shell">
-          <img src="assets/screen-australia.png" width="167" height="138" alt="Screen Australia">
-          <div>
-            <p class="eyebrow" id="support-title">With support from</p>
-            <p>Bumper Bout is partially funded by Screen Australia.</p>
-          </div>
-        </div>
-      </section>
-    </main>
+            <div class="action-row">
+              <a class="wishlist-button" href="https://store.steampowered.com/app/3938260/Bumper_Bout/" target="_blank" rel="noreferrer" aria-label="Wishlist Bumper Bout on Steam">
+                <img class="wishlist-bg" src="assets/figma/steam-mark-03.svg" width="281" height="94" alt="" aria-hidden="true">
+                <img class="wishlist-steam" src="assets/figma/platform-switch.svg" width="74" height="74" alt="" aria-hidden="true">
+                <span class="wishlist-copy"><strong>WISHLIST</strong><strong>NOW</strong><small>(please)</small></span>
+              </a>
+              <img class="steam-wordmark" src="assets/figma/platform-steam.svg" width="203" height="61" alt="Available on Steam">
+            </div>
 
-    <footer class="site-footer">
-      <div class="footer-main shell">
-        <div>
-          <a class="footer-brand" href="#top">ROCKALOT</a>
-          <p>Independent games by Rocco Loria<br>Brisbane, Australia</p>
-        </div>
-        <nav class="footer-links" aria-label="Contact and social links">
-          <a href="mailto:sonrocco@gmail.com">Email</a>
-          <a href="https://store.steampowered.com/app/3938260/Bumper_Bout/" target="_blank" rel="noreferrer">Steam <span aria-hidden="true">↗</span></a>
-          <a href="https://bsky.app/profile/rockalot.bsky.social" target="_blank" rel="noreferrer">Bluesky <span aria-hidden="true">↗</span></a>
-          <a href="https://m.me/sonrocco" target="_blank" rel="noreferrer">Messenger <span aria-hidden="true">↗</span></a>
+            <p class="game-pitch">Bumper Bout is a 1–2 player local PvP pinball game.</p>
+
+            <div class="game-details">
+              <div class="game-copy">
+                <ul>
+                  <li>A new joined pinball versus concept</li>
+                  <li>20+ stages, each with bespoke mechanics</li>
+                  <li>9+ characters, each with a unique super power</li>
+                  <li>Local and online multiplayer</li>
+                  <li>Arcade and survival single-player modes</li>
+                </ul>
+
+                <p>Players engage in direct competition on a joined playfield with shared balls. Each player has five lives. Hitting bumpers and targets yields points that can be spent to fire Attack Balls at an opponent. Save four and they combine into a Super Ball, offering special benefits and activating each character’s unique super power.</p>
+                <p class="tagline">Easy to play, hard to master.<br>Simple to pick up, impossible to put down.</p>
+              </div>
+
+              <div class="screenshot-rail" aria-label="Bumper Bout screenshots">
+                <button type="button" data-lightbox="assets/figma/raw-01.png" data-alt="Two players competing on Bumper Bout's classic joined playfield">
+                  <img src="assets/figma/raw-04.png" width="320" height="180" alt="Two players competing on Bumper Bout's classic joined playfield" loading="lazy">
+                </button>
+                <button type="button" data-lightbox="assets/figma/raw-03.png" data-alt="Bumper Bout match on a space stage with planets and satellites">
+                  <img src="assets/figma/raw-02.png" width="320" height="180" alt="Bumper Bout match on a space stage with planets and satellites" loading="lazy">
+                </button>
+                <button type="button" data-lightbox="assets/figma/raw-05.png" data-alt="Bumper Bout match on a colourful football stage">
+                  <img src="assets/figma/raw-06.png" width="320" height="180" alt="Bumper Bout match on a colourful football stage" loading="lazy">
+                </button>
+              </div>
+            </div>
+
+            <div class="trailer-placeholder" role="img" aria-label="Bumper Bout trailer coming soon">
+              <img src="assets/figma/raw-01.png" width="2560" height="1440" alt="" aria-hidden="true" loading="lazy">
+              <span>Trailer Here</span>
+            </div>
+
+            <a class="media-kit" href="mailto:sonrocco@gmail.com?subject=Bumper%20Bout%20Media%20Kit">Media Kit</a>
+          </article>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <nav class="social-cluster social-cluster--footer" aria-label="Rockalot contact links">
+          <img src="assets/figma/steam-mark-02.svg" width="299" height="44" alt="" aria-hidden="true">
+          <a class="social-hit social-hit--one" href="https://bsky.app/profile/rockalot.bsky.social" target="_blank" rel="noreferrer" aria-label="Rockalot on Bluesky"></a>
+          <a class="social-hit social-hit--two" href="mailto:sonrocco@gmail.com" aria-label="Email Rockalot"></a>
+          <a class="social-hit social-hit--three" href="https://m.me/sonrocco" target="_blank" rel="noreferrer" aria-label="Message Rockalot on Messenger"></a>
         </nav>
-      </div>
-      <div class="footer-bottom shell">
-        <p>© <span id="year">2026</span> Rockalot. All rights reserved.</p>
-        <a href="#top">Back to top ↑</a>
-      </div>
-    </footer>
+        <p class="copyright">© <span id="year">2026</span> Rockalot. All rights reserved.</p>
+        <div class="screen-australia">
+          <img src="assets/screen-australia.png" width="167" height="138" alt="Screen Australia">
+          <p>Bumper Bout is partially funded by Screen Australia.</p>
+        </div>
+      </footer>
+    </div>
 
-    <dialog class="lightbox" aria-label="Enlarged game screenshot">
+    <dialog class="lightbox" aria-label="Enlarged Bumper Bout screenshot">
       <button class="lightbox-close" type="button" aria-label="Close enlarged image">Close <span aria-hidden="true">×</span></button>
       <img src="" alt="">
     </dialog>
