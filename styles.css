@@ -211,19 +211,6 @@ a { color: inherit; }
   border: 0;
 }
 
-.media-kit {
-  width: max-content;
-  margin: clamp(24px, 1.8vw, 46px) auto 0;
-  display: block;
-  color: var(--link);
-  font-size: clamp(15px, 1.02vw, 26px);
-  font-weight: 500;
-  text-underline-offset: 0.22em;
-  text-decoration-thickness: 1px;
-}
-
-.media-kit:hover { color: #225f8a; }
-
 .site-footer {
   min-height: clamp(190px, 10.4vw, 266px);
   padding: clamp(36px, 3vw, 77px) 24px 24px;
