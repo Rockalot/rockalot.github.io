@@ -60,9 +60,9 @@ a { color: inherit; }
   overflow: hidden;
   border-radius: clamp(0px, 0.8vw, 20px);
   background-color: var(--paper);
-  background-image: radial-gradient(circle, #dfe5ed 1.15px, transparent 1.25px);
-  background-size: 15px 15px;
-  animation: dots-drift 24s linear infinite;
+  background-image: radial-gradient(circle, #dfe5ed 2.3px, transparent 2.5px);
+  background-size: 30px 30px;
+  animation: dots-drift 6s linear infinite;
 }
 
 @keyframes dots-drift {
@@ -265,7 +265,7 @@ a { color: inherit; }
 .lightbox-close span { margin-left: 0.3rem; font-size: 1.35rem; }
 
 @media (max-width: 700px) {
-  .page-shell { border-radius: 0; background-size: 13px 13px; }
+  .page-shell { border-radius: 0; background-size: 26px 26px; }
   .hero { padding-top: 92px; }
   .rockalot-mark { width: 122px; }
   .studio-intro { width: min(80%, 32rem); margin-top: 34px; font-size: 15px; }
