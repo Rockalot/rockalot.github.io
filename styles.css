@@ -69,56 +69,6 @@ a { color: inherit; }
   to { background-position: 0 -60px; }
 }
 
-.language-control {
-  position: absolute;
-  top: clamp(24px, 2vw, 51px);
-  left: clamp(24px, 1.95vw, 50px);
-  z-index: 10;
-}
-
-.language-button {
-  min-width: clamp(104px, 6.93vw, 177px);
-  min-height: clamp(44px, 2.7vw, 69px);
-  padding: 0.4rem clamp(0.65rem, 0.7vw, 1.15rem);
-  display: flex;
-  align-items: center;
-  gap: clamp(0.35rem, 0.45vw, 0.7rem);
-  border: clamp(1px, 0.06vw, 1.5px) solid #e1e1e1;
-  border-radius: clamp(9px, 0.57vw, 15px);
-  background: #fff;
-  box-shadow: 0 clamp(3px, 0.17vw, 4px) 0 rgba(0, 0, 0, 0.15);
-  color: #000;
-  cursor: pointer;
-  font: 700 clamp(15px, 0.96vw, 24.5px)/1 "Comfortaa", sans-serif;
-  letter-spacing: 0.05em;
-}
-
-.language-button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 clamp(4px, 0.21vw, 5px) 0 rgba(0, 0, 0, 0.15);
-}
-
-.language-button > img:first-child { width: clamp(31px, 2.07vw, 53px); height: auto; }
-.language-button .language-arrow { width: clamp(8px, 0.39vw, 10px); transition: transform 160ms ease; }
-.language-button[aria-expanded="true"] .language-arrow { transform: rotate(180deg); }
-
-.language-menu {
-  position: absolute;
-  top: calc(100% + 0.65rem);
-  left: 0;
-  width: max-content;
-  padding: 0.75rem 0.9rem;
-  display: grid;
-  gap: 0.2rem;
-  border: 1px solid #e1e1e1;
-  border-radius: 0.65rem;
-  background: #fff;
-  box-shadow: 0 0.7rem 1.8rem rgba(0, 0, 0, 0.12);
-  font-size: 0.85rem;
-}
-
-.language-menu[hidden] { display: none; }
-
 .hero {
   min-height: 0;
   padding: clamp(95px, 6.52vw, 167px) 0 0;
@@ -295,7 +245,7 @@ a { color: inherit; }
   font-size: clamp(11px, 0.62vw, 16px);
 }
 
-.screen-australia img { width: clamp(38px, 2.3vw, 59px); height: auto; }
+.screen-australia img { width: clamp(132px, 8.2vw, 210px); height: auto; }
 .screen-australia p { margin: 0; }
 
 .lightbox {
@@ -329,9 +279,6 @@ a { color: inherit; }
 
 @media (max-width: 700px) {
   .page-shell { border-radius: 0; background-size: 13px 13px; }
-  .language-control { top: 16px; left: 16px; }
-  .language-button { min-width: 92px; min-height: 40px; font-size: 13px; }
-  .language-button > img:first-child { width: 27px; }
   .hero { padding-top: 92px; }
   .rockalot-mark { width: 122px; }
   .studio-intro { width: min(80%, 32rem); margin-top: 34px; font-size: 15px; }
@@ -354,7 +301,8 @@ a { color: inherit; }
   .screenshot-rail { grid-template-columns: repeat(3, 1fr); gap: 4px; }
   .trailer-embed { margin-top: 30px; }
   .site-footer { min-height: 230px; }
-  .screen-australia { max-width: 290px; text-align: left; }
+  .screen-australia { max-width: 320px; flex-direction: column; gap: 0.65rem; text-align: center; }
+  .screen-australia img { width: 150px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

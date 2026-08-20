@@ -1,18 +1,3 @@
-const languageButton = document.querySelector('.language-button');
-const languageMenu = document.querySelector('.language-menu');
-
-languageButton?.addEventListener('click', () => {
-  const expanded = languageButton.getAttribute('aria-expanded') === 'true';
-  languageButton.setAttribute('aria-expanded', String(!expanded));
-  languageMenu.hidden = expanded;
-});
-
-document.addEventListener('click', (event) => {
-  if (!languageButton || !languageMenu || languageButton.contains(event.target) || languageMenu.contains(event.target)) return;
-  languageButton.setAttribute('aria-expanded', 'false');
-  languageMenu.hidden = true;
-});
-
 const lightbox = document.querySelector('.lightbox');
 const lightboxImage = lightbox?.querySelector('img');
 const closeButton = lightbox?.querySelector('.lightbox-close');
