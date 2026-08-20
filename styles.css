@@ -1,6 +1,7 @@
 :root {
   --paper: #fcfdff;
   --ink: #000;
+  --brand-red: #e70013;
   --footer: #ededed;
   --card-border: #e8e8e8;
   --link: #418dc2;
@@ -61,6 +62,11 @@ a { color: inherit; }
   background-color: var(--paper);
   background-image: radial-gradient(circle, #dfe5ed 1.15px, transparent 1.25px);
   background-size: 15px 15px;
+  animation: dots-drift 24s linear infinite;
+}
+
+@keyframes dots-drift {
+  to { background-position: 0 -60px; }
 }
 
 .language-control {
@@ -136,32 +142,38 @@ a { color: inherit; }
 .gday {
   position: absolute;
   top: -0.75em;
-  right: 5%;
+  right: 12%;
   color: #a5a5a5;
   font-size: 0.78em;
   transform: rotate(15deg);
 }
 
 .social-cluster {
+  --social-color: #abb9ce;
   position: relative;
   width: clamp(150px, 11.69vw, 299px);
   aspect-ratio: 299 / 44;
 }
 
-.social-cluster > img { width: 100%; height: 100%; }
 .social-cluster--hero { margin-top: clamp(26px, 2.33vw, 60px); }
 
 .social-hit {
   position: absolute;
-  top: -35%;
-  bottom: -35%;
-  border-radius: 999px;
+  top: 0;
+  bottom: 0;
+  background: currentColor;
+  color: var(--social-color);
+  -webkit-mask: url("assets/figma/rockalot-logo.svg") no-repeat;
+  -webkit-mask-size: 400% 100%;
+  mask: url("assets/figma/rockalot-logo.svg") no-repeat;
+  mask-size: 400% 100%;
+  transition: color 150ms ease;
 }
 
-.social-hit--one { left: 0; width: 25%; }
-.social-hit--two { left: 37%; width: 25%; }
-.social-hit--three { right: 0; width: 25%; }
-.social-hit:hover { background: rgba(65, 141, 194, 0.1); }
+.social-hit--one { left: 0; width: 25%; -webkit-mask-position: left center; mask-position: left center; }
+.social-hit--two { left: 37%; width: 25%; -webkit-mask-position: center; mask-position: center; }
+.social-hit--three { right: 0; width: 25%; -webkit-mask-position: right center; mask-position: right center; }
+.social-hit:hover, .social-hit:focus-visible { color: var(--brand-red); }
 
 .game-card {
   position: relative;
@@ -181,41 +193,22 @@ a { color: inherit; }
   position: relative;
   z-index: 2;
   min-height: clamp(52px, 3.7vw, 95px);
-  margin-top: -7.5%;
+  margin-top: clamp(20px, 1.35vw, 35px);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(22px, 3.2vw, 82px);
 }
 
 .wishlist-button {
-  position: relative;
-  width: clamp(132px, 10.98vw, 281px);
-  aspect-ratio: 281 / 94;
+  width: clamp(156px, 11.02vw, 282px);
   display: block;
   flex: 0 0 auto;
-  color: #fff;
   text-decoration: none;
   transition: transform 150ms ease;
 }
 
 .wishlist-button:hover, .wishlist-button:focus-visible { transform: translateY(-3px); }
-.wishlist-bg { position: absolute; inset: 0; width: 100%; height: 100%; }
-.wishlist-steam { position: absolute; top: 10%; left: 3%; width: 26%; height: 79%; }
-
-.wishlist-copy {
-  position: absolute;
-  inset: 9% 7% 8% 31%;
-  display: grid;
-  place-content: center;
-  text-align: center;
-  font-family: "Readex Pro", sans-serif;
-  line-height: 0.86;
-}
-
-.wishlist-copy strong { font-size: clamp(12px, 1.12vw, 28.8px); letter-spacing: -0.04em; }
-.wishlist-copy small { margin-top: 0.28em; color: rgba(255, 255, 255, 0.5); font-size: clamp(5px, 0.28vw, 7.2px); line-height: 1; }
-.steam-wordmark { width: clamp(104px, 7.92vw, 203px); height: auto; }
+.wishlist-button img { width: 100%; height: auto; }
 
 .game-pitch {
   margin: clamp(22px, 1.75vw, 45px) 0 0;
@@ -251,7 +244,7 @@ a { color: inherit; }
 .screenshot-rail img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; transition: opacity 160ms ease, transform 160ms ease; }
 .screenshot-rail button:hover img, .screenshot-rail button:focus-visible img { opacity: 0.82; transform: scale(1.02); }
 
-.trailer-placeholder {
+.trailer-embed {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -260,19 +253,12 @@ a { color: inherit; }
   background: #111;
 }
 
-.trailer-placeholder::after { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.71); content: ""; }
-.trailer-placeholder img { width: 100%; height: 100%; object-fit: cover; }
-
-.trailer-placeholder span {
+.trailer-embed iframe {
   position: absolute;
-  z-index: 1;
   inset: 0;
-  display: grid;
-  place-items: center;
-  color: #fff;
-  font-size: clamp(26px, 1.95vw, 50px);
-  font-weight: 700;
-  letter-spacing: 0.14em;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 .media-kit {
@@ -297,7 +283,7 @@ a { color: inherit; }
   background: var(--footer);
 }
 
-.social-cluster--footer { width: clamp(145px, 11.69vw, 299px); }
+.social-cluster--footer { --social-color: #999; width: clamp(145px, 11.69vw, 299px); }
 .copyright { margin: clamp(24px, 1.9vw, 48px) 0 0; font-size: clamp(13px, 0.82vw, 21px); font-weight: 300; }
 
 .screen-australia {
@@ -349,7 +335,7 @@ a { color: inherit; }
   .hero { padding-top: 92px; }
   .rockalot-mark { width: 122px; }
   .studio-intro { width: min(80%, 32rem); margin-top: 34px; font-size: 15px; }
-  .gday { right: -2%; }
+  .gday { right: 5%; }
   .social-cluster--hero { margin-top: 30px; }
 
   .game-card {
@@ -360,21 +346,19 @@ a { color: inherit; }
   }
 
   .game-art { width: 100%; margin-top: -15%; }
-  .action-row { margin-top: -3%; gap: 18px; }
-  .wishlist-button { width: 142px; }
-  .wishlist-copy strong { font-size: 12.5px; }
-  .steam-wordmark { width: 103px; }
+  .action-row { margin-top: 20px; }
+  .wishlist-button { width: 170px; }
   .game-pitch { margin-top: 22px; font-size: 15px; }
   .game-details { grid-template-columns: 1fr; gap: 28px; }
   .game-copy { font-size: 14px; line-height: 1.7; }
   .screenshot-rail { grid-template-columns: repeat(3, 1fr); gap: 4px; }
-  .trailer-placeholder { margin-top: 30px; }
-  .trailer-placeholder span { font-size: clamp(21px, 7vw, 30px); }
+  .trailer-embed { margin-top: 30px; }
   .site-footer { min-height: 230px; }
   .screen-australia { max-width: 290px; text-align: left; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .page-shell { animation: none; }
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
 }
