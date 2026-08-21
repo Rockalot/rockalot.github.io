@@ -1,12 +1,13 @@
 const pageShell = document.querySelector('.page-shell');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const mobileLayout = window.matchMedia('(max-width: 700px)');
 const dotParallaxCompensation = 0.72;
 let dotParallaxFrame = null;
 
 const updateDotParallax = () => {
   dotParallaxFrame = null;
 
-  if (!pageShell || reducedMotion.matches) {
+  if (!pageShell || reducedMotion.matches || mobileLayout.matches) {
     pageShell?.style.removeProperty('--dot-parallax-y');
     return;
   }
@@ -21,6 +22,7 @@ const requestDotParallaxUpdate = () => {
 
 window.addEventListener('scroll', requestDotParallaxUpdate, { passive: true });
 reducedMotion.addEventListener('change', requestDotParallaxUpdate);
+mobileLayout.addEventListener('change', requestDotParallaxUpdate);
 updateDotParallax();
 
 const lightbox = document.querySelector('.lightbox');
