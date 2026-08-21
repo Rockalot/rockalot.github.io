@@ -1,3 +1,28 @@
+const pageShell = document.querySelector('.page-shell');
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const dotParallaxCompensation = 0.72;
+let dotParallaxFrame = null;
+
+const updateDotParallax = () => {
+  dotParallaxFrame = null;
+
+  if (!pageShell || reducedMotion.matches) {
+    pageShell?.style.removeProperty('--dot-parallax-y');
+    return;
+  }
+
+  pageShell.style.setProperty('--dot-parallax-y', `${window.scrollY * dotParallaxCompensation}px`);
+};
+
+const requestDotParallaxUpdate = () => {
+  if (dotParallaxFrame !== null) return;
+  dotParallaxFrame = window.requestAnimationFrame(updateDotParallax);
+};
+
+window.addEventListener('scroll', requestDotParallaxUpdate, { passive: true });
+reducedMotion.addEventListener('change', requestDotParallaxUpdate);
+updateDotParallax();
+
 const lightbox = document.querySelector('.lightbox');
 const lightboxImage = lightbox?.querySelector('img');
 const closeButton = lightbox?.querySelector('.lightbox-close');
