@@ -208,6 +208,20 @@ a { color: inherit; }
   border: 0;
 }
 
+.game-press-link {
+  margin: 1.35rem 0 0;
+  font-size: clamp(12px, 0.72vw, 18px);
+  text-align: center;
+}
+
+.game-press-link a {
+  color: #555;
+  text-decoration-color: #aaa;
+  text-underline-offset: 0.24em;
+}
+
+.game-press-link a:hover, .game-press-link a:focus-visible { color: var(--brand-red); }
+
 .site-footer {
   min-height: clamp(190px, 10.4vw, 266px);
   padding: clamp(36px, 3vw, 77px) 24px 24px;
