@@ -100,7 +100,7 @@ a { color: inherit; }
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(8px, 0.7vw, 18px);
+  gap: clamp(18.75px, 1.46vw, 37.5px);
 }
 
 .social-cluster {
@@ -130,8 +130,8 @@ a { color: inherit; }
 .social-hit--three { right: 0; width: 25%; -webkit-mask-position: right center; mask-position: right center; }
 
 .social-icon {
-  width: clamp(31px, 1.72vw, 44px);
-  aspect-ratio: 1;
+  width: clamp(37.5px, 2.92vw, 74.75px);
+  height: clamp(22px, 1.72vw, 44px);
   display: block;
   flex: 0 0 auto;
   background: currentColor;
