@@ -68,7 +68,7 @@ a { color: inherit; }
 
 .hero {
   min-height: 0;
-  padding: clamp(95px, 6.52vw, 167px) 0 0;
+  padding: clamp(47.5px, 3.26vw, 83.5px) 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -152,6 +152,25 @@ a { color: inherit; }
 }
 
 .social-icon:hover, .social-icon:focus-visible { color: var(--brand-red); }
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px 20px;
+  width: calc(100% - 32px);
+  margin-top: clamp(28px, 2.2vw, 56px);
+}
+
+.hero-action {
+  display: block;
+  border-radius: 999px;
+  transition: transform 150ms ease;
+}
+
+.hero-action img { width: auto; height: clamp(72px, 5.2vw, 99px); }
+.hero-action:hover, .hero-action:focus-visible { transform: translateY(-3px); }
 
 .game-card {
   position: relative;
@@ -324,7 +343,7 @@ a { color: inherit; }
     background-color: transparent;
     background-image: none;
   }
-  .hero { padding-top: 92px; }
+  .hero { padding-top: 46px; }
   .rockalot-mark { width: 122px; }
   .studio-intro { width: min(80%, 32rem); margin-top: 34px; font-size: 15px; }
   .gday { right: 5%; }
