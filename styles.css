@@ -186,27 +186,6 @@ a { color: inherit; }
 
 .game-art { width: 96.6%; height: auto; margin: -14.5% auto 0; }
 
-.action-row {
-  position: relative;
-  z-index: 2;
-  min-height: clamp(52px, 3.7vw, 95px);
-  margin-top: clamp(20px, 1.35vw, 35px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.wishlist-button {
-  width: clamp(156px, 11.02vw, 282px);
-  display: block;
-  flex: 0 0 auto;
-  text-decoration: none;
-  transition: transform 150ms ease;
-}
-
-.wishlist-button:hover, .wishlist-button:focus-visible { transform: translateY(-3px); }
-.wishlist-button img { width: 100%; height: auto; }
-
 .game-pitch {
   margin: clamp(22px, 1.75vw, 45px) 0 0;
   font-size: clamp(12px, 0.86vw, 22px);
@@ -225,6 +204,10 @@ a { color: inherit; }
 .game-copy ul { margin: 0; padding-left: 1.5em; }
 .game-copy p { margin: clamp(22px, 1.45vw, 37px) 0 0; }
 .game-copy .tagline { margin-top: clamp(20px, 1.35vw, 35px); }
+
+.game-media { min-width: 0; display: grid; align-content: start; gap: 16px; }
+.game-wishlist { width: min(100%, clamp(205px, 14.77vw, 281px)); justify-self: center; }
+.game-wishlist img { width: 100%; height: auto; }
 
 .screenshot-rail { display: grid; align-content: start; gap: clamp(4px, 0.2vw, 6px); }
 
@@ -357,8 +340,6 @@ a { color: inherit; }
   }
 
   .game-art { width: 100%; margin-top: -15%; }
-  .action-row { margin-top: 20px; }
-  .wishlist-button { width: 170px; }
   .game-pitch { margin-top: 22px; font-size: 15px; }
   .game-details { grid-template-columns: 1fr; gap: 28px; }
   .game-copy { font-size: 14px; line-height: 1.7; }
